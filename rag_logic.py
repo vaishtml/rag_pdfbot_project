@@ -3,7 +3,8 @@ import os, tempfile
 from fastapi import FastAPI, UploadFile, Form, Header, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from langchain_google_genai import ChatGoogleGenerativeAI
-from langchain.prompts import PromptTemplate
+from langchain_core.prompts import PromptTemplate
+from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_community.document_loaders import PyPDFLoader, TextLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import Chroma
@@ -67,3 +68,4 @@ async def ask_question(
 
     res = qa.invoke({"query": question})
     return {"answer": res["result"]}
+
