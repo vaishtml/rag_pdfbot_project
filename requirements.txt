@@ -1,0 +1,10 @@
+streamlit
+fastapi
+uvicorn
+requests
+langchain
+langchain-huggingface
+langchain-google-genai
+chromadb
+sentence-transformers
+pypdf
